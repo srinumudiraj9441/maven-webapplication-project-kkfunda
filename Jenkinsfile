@@ -12,7 +12,7 @@ pipeline {
 
             steps {
 
-                git branch: 'prod_DL',
+                git branch: 'master',
                     url: 'https://github.com/srinumudiraj9441/maven-webapplication-project-kkfunda.git'
             }
         }
