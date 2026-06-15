@@ -52,7 +52,7 @@ pipeline {
                 sh '''
                 curl -u admin:srinivas \
                 --upload-file target/maven-web-application.war \
-                "http://98.130.44.140:8080/manager/text/deploy?path=/maven-web-application&update=true"
+                "http://18.61.229.146:8080/manager/text/deploy?path=/maven-web-application&update=true"
                 '''
             }
         }
