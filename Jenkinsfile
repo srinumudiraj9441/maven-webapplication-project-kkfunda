@@ -1,9 +1,9 @@
-//scripted-way-PL
+//testing samplescripted-way-PL
 
 node
 {
 
-def mavenHome= tool name: "maven-3.9.0"
+def mavenHome= tool name: "maven-3.9.16"
 echo "git branch Name: ${env.BRANCH_NAME}"
 echo "build number: ${env.BUILD_NUMBER}"
 
@@ -12,7 +12,7 @@ echo "build number: ${env.BUILD_NUMBER}"
      stage('git checkout')
    {
       notifyBuild('STARTED')
-      git branch: 'master', url: 'https://github.com/kkdevopsb9/maven-webapplication-project-kkfunda.git'
+      git branch: 'master', url: 'https://github.com/srinumudiraj9441/maven-webapplication-project-kkfunda.git'
    }
    stage('COMPILE')
    {
@@ -60,8 +60,8 @@ echo "build number: ${env.BUILD_NUMBER}"
       sh """
 
       curl -u kk:password \
---upload-file /var/lib/jenkins/workspace/webapp-Scripted-Way-PL/target/maven-web-application.war \
-"http://52.66.203.242:8080/manager/text/deploy?path=/maven-web-application&update=true"
+--upload-file /var/lib/jenkins/workspace/scripted-pipeline-webapp/target/maven-web-application.war \
+"http://18.61.127.91:8080/manager/text/deploy?path=/maven-web-application&update=true"
           
         """
     }
@@ -101,6 +101,6 @@ def notifyBuild(String buildStatus = 'STARTED') {
   }
 
   // Send notifications
-  slackSend (color: colorCode, message: summary, channel: '#dev-b9')
+  slackSend (color: colorCode, message: summary, channel: '#all-devops')
   
 }
