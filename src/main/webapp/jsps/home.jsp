@@ -47,7 +47,7 @@
 <body>
 
 <header>
-    <h1>🚀 WELCOME TO KK DEVOPS ONLINE TRAINING KK BATCH ON JUNE 28🚀</h1>
+    <h1>🚀 WELCOME TO new KK DEVOPS ONLINE TRAINING KK BATCH ON JUNE 28 hyderabad🚀</h1>
     <h3>Training | Development | Consulting</h3>
 </header>
 
